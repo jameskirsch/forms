@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Setup basic forms</title>
+        <title>Collecting Information</title>
         <link rel="stylesheet" type="text/css" href="site.css">
     </head>
     <body>
-        <h1>Setting up a form</h1>
+        <h1>Collecting your information</h1>
         <!-- Set Up Forms -->
         <form action="/form-processing-script" method="post">
-            <label for="firstName">First Name: </label>
-            <input type="text" name="firstName"/>
-        
+            <legend>Name and Age</legend>
+            <fieldset>
+            <div style="padding-bottom: 50px">
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName"/>
+            <div>
+            <div>
+                <label for="age">Are you over 30?</label>
+                <input type="checkbox" name="age">
+            </div>
+        </fieldset>
+            <div>
+                <!-- Selection List -->
+                <label for="whatAgeRange">What age range are you in?</label>
+                <select name="whatAgeRange">
+                    <option value="1">10-20</option>
+                    <option value="1">21-30</option>
+                    <option value="1">31-40</option>
+                    <option value="1">41-50</option>
+                    <option value="1">51-60</option>
+                    <option value="1">61-70</option>
+                </select>
+                <label style="display:block" name="100" >over 100 lbs?<input type="radio"><label>
+                <label style="display:block" name="200"><input type="radio">over 200 lbs?<label> 
+                <label style="display:block" name="300"><input type="radio">over 300 lbs?<label> 
+            </div>
         </form>
     </body>
 </html>
